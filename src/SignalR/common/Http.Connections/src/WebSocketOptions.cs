@@ -26,4 +26,10 @@ public class WebSocketOptions
     // https://github.com/aspnet/HttpAbstractions/blob/a6bdb9b1ec6ed99978a508e71a7f131be7e4d9fb/src/Microsoft.AspNetCore.Http.Abstractions/WebSocketManager.cs#L23
     // Unfortunately, IList<T> does not implement IReadOnlyList<T> :(
     public Func<IList<string>, string>? SubProtocolSelector { get; set; }
+
+    /// <summary>
+    /// Enables or disables Websocket per-message compression.
+    /// </summary>
+    /// <value>Defaults to false (compression disabled)</value>
+    public bool DangerousEnableCompression { get; set; }
 }

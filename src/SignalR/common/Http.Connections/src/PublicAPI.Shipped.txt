@@ -44,6 +44,8 @@ Microsoft.AspNetCore.Http.Connections.WebSocketOptions.CloseTimeout.get -> Syste
 Microsoft.AspNetCore.Http.Connections.WebSocketOptions.CloseTimeout.set -> void
 Microsoft.AspNetCore.Http.Connections.WebSocketOptions.SubProtocolSelector.get -> System.Func<System.Collections.Generic.IList<string!>!, string!>?
 Microsoft.AspNetCore.Http.Connections.WebSocketOptions.SubProtocolSelector.set -> void
+Microsoft.AspNetCore.Http.Connections.WebSocketOptions.DangerousEnableCompression.get -> bool
+Microsoft.AspNetCore.Http.Connections.WebSocketOptions.DangerousEnableCompression.set -> void
 Microsoft.AspNetCore.Http.Connections.WebSocketOptions.WebSocketOptions() -> void
 Microsoft.Extensions.DependencyInjection.ConnectionsDependencyInjectionExtensions
 static Microsoft.AspNetCore.Builder.ConnectionEndpointRouteBuilderExtensions.MapConnectionHandler<TConnectionHandler>(this Microsoft.AspNetCore.Routing.IEndpointRouteBuilder! endpoints, string! pattern) -> Microsoft.AspNetCore.Builder.ConnectionEndpointRouteBuilder!

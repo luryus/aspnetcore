@@ -36,8 +36,13 @@ internal sealed partial class WebSocketsServerTransport : IHttpTransport
         Debug.Assert(context.WebSockets.IsWebSocketRequest, "Not a websocket request");
 
         var subProtocol = _options.SubProtocolSelector?.Invoke(context.WebSockets.WebSocketRequestedProtocols);
+        var wsAcceptContext = new WebSocketAcceptContext
+        {
+            SubProtocol = subProtocol,
+            DangerousEnableCompression = _options.DangerousEnableCompression
+        };
 
-        using (var ws = await context.WebSockets.AcceptWebSocketAsync(subProtocol))
+        using (var ws = await context.WebSockets.AcceptWebSocketAsync(wsAcceptContext))
         {
             Log.SocketOpened(_logger, subProtocol);
 
